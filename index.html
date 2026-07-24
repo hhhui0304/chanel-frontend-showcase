@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;">
+        <title>Chanel-home</title>
+            <link rel="icon" href="images/logo/Chanel icon.png" type="image/png">
+            <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">            
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo/Chanel logo.png" height="90">
+                        </a>                  
+                    </div>
+                           
+                    <button class="bar-button">
+                        <img src="images/logo/bar logo.png" width="30px">
+                    </button>
+
+                    <nav>
+                        <ul>                            
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="handbags.html">Handbags</a></li>
+                            <li><a href="shoes.html">Shoes</a></li>
+                            <li><a href="jewellery.html">Jewellery</a></li>
+                            <li><a href="clothes.html">Clothes</a></li>
+                        </ul>
+                    </nav>                
+                </div>
+            </div>
+        </div>
+        <div class="videoslide">
+          <video src="https://youtu.be/bdkixtCGRDQ?si=kOtIenmvcdXJwRj_" class="slider" autoplay loop muted></video>
+  
+          <ul>
+              <li onclick="videoslider('./video/video 1.mp4')"><video src="./video/video 1.mp4"></video></li>
+              <li onclick="videoslider('./video/video 2.mp4')"><video src="./video/video 2.mp4"></video></li>
+              <li onclick="videoslider('./video/video 3.mp4')"><video src="./video/video 3.mp4"></video></li>
+              <li onclick="videoslider('./video/video 4.mp4')"><video src="./video/video 4.mp4"></video></li>
+              <li onclick="videoslider('./video/video 5.mp4')"><video src="./video/video 5.mp4"></video></li>
+          </ul>
+      </div>
+  
+  
+      <script>
+  
+          function videoslider(links){
+              document.querySelector(".slider").src = links;
+          }
+  
+      </script>
+       <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h4>EXPLORE CHANEL.COM</h4>
+                        <ul>
+                            <li><a href="handbags.html">Handbags</a></li>
+                            <li><a href="shoes.html">Shoes</a></li>
+                            <li><a href="jewellery.html">Jewellery</a></li>
+                            <li><a href="clothes.html">Clothes</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-2">
+                        <h4>BOUTIQUE SERVICES</h4>
+                        <ul>
+                            <li><a href="#">Store Locator</a></li>
+                            <li><a href="#">Appointments with CHANEL</a></li>
+                        </ul>
+                    </div>
+                       
+                    <div class="footer-col-3">
+                        <h4>THE HOUSE OF CHANEL</h4>
+                        <ul>
+                            <li><a href="#">Report to Society</a></li>
+                            <li><a href="#">FightingCounterfeits</a></li>
+                            <li><a href="#">Financial Results</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h4>ONLINE SERVICES</h4>
+                        <ul>   
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Care & Services</a></li>
+                        </ul>   
+                    </div>
+                    
+                    <div class="footer-col-5">
+                        <h4>FOLLOW US</h4>
+                            <a href="https://www.instagram.com/chanel.beauty/" target="_blank"><img src="images/logo/instagram logo.png"></a>
+                            <a href="https://www.facebook.com/chanel/" target="_blank"><img src="images/logo/facebook logo.png"></a>
+                            <a href="https://twitter.com/CHANEL" target="_blank"><img src="images/logo/twitter logo.png"></a>
+                            <a href="https://www.youtube.com/c/CHANEL" target="_blank"><img src="images/logo/youtube logo.png"></a>
+                        <ul>
+                            <p>Copyright Ⓒ 2022 CHANEL E-Commerce Front-End Showcase. All rights reserved. </p>           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+       </div>
+      
+    </body>
+
+</html>

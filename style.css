@@ -1,0 +1,714 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Cinzel', serif;
+font-family: 'Exo', sans-serif;
+font-family: 'GFS Didot', serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Libre Baskerville', serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cinzel&family=Exo:wght@200&family=GFS+Didot&family=Kaushan+Script&family=Libre+Baskerville&display=swap');
+
+/*
+Pale Rose: #F2D7D9;
+Fog: #D3CEDF;
+Echo Blue: #9CB4CC;
+Bermuda Grey: #748DA6;
+Scallop Seashell: #E7D2CC;
+Pewter: #B9B7BD;
+Gray: #868B8E;
+Ivory: #EEEDE7;
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	text-transform: capitalize;
+}
+
+body{
+	background-color:#FFFFFF;
+}
+
+.header{
+	background-color: #FFFFFF;
+	font-family: 'Cinzel', serif;
+}
+
+.container{
+	max-width: 1300px;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	position: sticky;
+}
+
+nav{
+	flex: 50%;
+	text-align: right;
+}
+
+.bar-button{
+	background-color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+}
+
+.bar-button img{
+	width: 35px;
+	filter: grayscale(100%);
+	opacity: 0.6;	
+	display: none;
+	position: absolute;
+	z-index: 9999;
+	background-repeat: no-repeat;
+	top: 2rem;
+	right: 2rem;
+	
+}
+
+.bar-button img:hover{
+	filter: none;
+	opacity: 1;
+}
+
+nav ul{
+	display: inline-block;
+	list-style-type: none;
+}
+
+nav ul li{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav ul li a{
+	font-size: 19px;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: right;
+}
+
+nav ul li a:hover{
+	color: #626774;
+	font-weight: 900;
+	background-color: white;
+	transition: 0.15ms;
+}
+
+
+.footer{
+	background-color: #24262bec;
+	color: #8a8a8a;
+	padding: 60px 0 20px;
+	font-size: 12px;
+	z-index: 0.8;
+	width: 100%;
+	font-family: 'Exo', sans-serif;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer ul{
+	list-style-type: none;
+}
+
+.footer p{
+	color: #8a8a8a;
+}
+
+.footer h4{
+	font-size: 15px;
+	color:#FFFF;
+	margin-bottom: 15px;
+	font-weight: 500;
+	z-index: 0.8;
+}
+
+.footer ul li{
+	margin-bottom: 10px;
+}
+
+.footer ul li a{
+	font-size: 13px;
+	color: #8a8a8a;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+}
+
+.footer ul li a:hover{
+	color: #FFFFFF;
+	padding-left: 20px;
+	transition: 0.3s;
+}
+
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4,.footer-col-5{
+	min-width: 240px;
+	margin-bottom: 20px;
+	flex-basis: 10%;
+	text-align:left;
+	box-sizing: border-box;
+}
+
+.footer-col-5{
+	text-align:right;
+}
+
+.footer-col-5 img{
+	width: 35px;
+	filter: grayscale(100%);
+	opacity: 0.5;
+}
+
+.footer-col-5 img:hover{
+	filter: none;
+	opacity: 1;
+}
+
+@media screen and (max-width: 1239px){
+	.footer{
+		width: 100%;
+	}
+
+	.footer-col-5{
+		text-align:center;
+		flex-basis: 100%;
+	}
+}
+
+@media screen and (max-width: 756px){
+	nav{
+		text-align: justify;
+	}
+
+	nav ul{
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		padding:  min(20vh,10rem)60px;
+		position: fixed;
+		text-align: left;
+		right: 0%;
+		inset: 0 0 0 100%;
+		background: #D7D7D7;
+		filter:opacity(100%);
+		z-index: auto;
+		border-radius:10px 0px 0px 10px;
+	}
+
+	nav ul:hover{
+		transition: 1s;
+		transform: translateX(-300px);
+		width: 1000px;
+	}
+
+	nav ul li a{
+		color: black;
+		line-height: 2.8;
+		font-weight:600;
+		font-size: 15px;
+		text-align: right;
+	}
+	
+	nav ul li a:hover{
+		color: grey;
+		padding-left: 30px;
+		transition: 0.3s;
+		background-color:#D7D7D7;
+	}
+
+	.bar-button img{
+		display: block;	
+	}
+
+	.bar-button:hover+nav ul{
+		transition: 1s;
+		transform: translateX(-300px);
+		width: 500px;
+	}
+
+
+	.footer{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	.footer-col-5{
+		text-align:left;
+	}
+}
+
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.videoslide {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.videoslide .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videoslide ul {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    padding: 0;
+}
+
+.videoslide ul li {
+    list-style: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.videoslide ul li video {
+    width: 180px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.videoslide ul li video:hover {
+    transform: scale(1.15);
+    border-color: #ffffff;
+}
+
+.jewellery-model {
+display: flex;
+width: 75%;
+margin: 20px auto;
+align-items: stretch;
+}
+
+.jewellery-model >div{
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+h1 {
+  text-indent: 90px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #494949
+}
+
+p {
+  text-indent: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.jewellery{
+max-width: 1300px;
+margin: auto;
+margin-top: 28px;
+margin-bottom: 28px;
+}
+
+.title span h1{
+text-transform: uppercase;
+text-align:center;
+}
+
+.title span h1::after{
+content:'';
+width: 50%;
+height: 6px;
+display: block;
+margin: 0 auto;
+border-bottom: 3px solid #9CB4CC;
+}
+
+.product-jewellery{
+flex-wrap: wrap;
+text-align:center;
+}
+
+.product-jewellery span{
+text-align: center;
+font-size: 30px;
+font-family: 'Kaushan Script', cursive;
+}
+
+.product-jewellery span::before{
+content:'';
+padding-top: 20px;
+display: block;
+}
+
+.content-QuikView a{
+font-family: 'Exo', sans-serif;
+color: rgb(119, 115, 115);
+font-weight: lighter;
+font-size: 20px;
+}
+
+.content-QuikView a:hover{
+padding-bottom: 20px;
+transition: 0.3s;
+color: black;
+}
+
+.product-jewellery h3{
+font-size: 12px;
+text-align:center;
+}
+
+.product-explain p{
+text-align:center;
+}
+
+.product-explain p::after{
+content:'';
+width: 60%;
+height: 10px;
+display: block;
+margin: 0 auto;
+border-bottom: 2px solid #9CB4CC;
+}
+
+.product-jewellery p{
+font-size: 12px;
+text-align:center;
+}
+
+.jewellery-rings .rings1,.rings2,.rings3{
+border: 1px solid rgb(255, 255, 255);
+display:inline-block;
+padding: 10px;
+}
+
+.jewellery-bracelets .bracelets1,.bracelets2,.bracelets3{
+border: 1px solid rgb(255, 255, 255);
+display:inline-block;
+padding: 10px;
+}
+
+.jewellery-necklaces .necklaces1,.necklaces2,.necklaces3{
+border: 1px solid rgb(255, 255, 255);
+display:inline-block;
+padding: 10px;
+}
+
+.handbags-model {
+display: flex;
+width: 75%;
+margin: 20px auto;
+align-items: stretch;
+}
+
+.handbags-model >div{
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+h1 {
+  text-indent: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #494949
+}
+
+p {
+  text-indent: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.handbags{
+max-width: 1300px;
+margin: auto;
+margin-top: 28px;
+margin-bottom: 28px;
+}
+
+.title span h1{
+text-indent: 20px;
+text-transform: uppercase;
+text-align: center;
+}
+
+.title span h1::after{
+content: '';
+width: 50px;
+height: 10px;
+display: block;
+margin: 0 auto;
+border-bottom: 3px solid #000000;
+}
+
+.product-handbags{
+flex-wrap: wrap;
+text-align: center;
+}
+
+.product-handbags h3{
+font-size: 15px;
+text-align: center;
+}
+
+.content-Quickview a{
+font-family:'exo',sans-serif;
+color:#BBBBBB;
+font-weight: lighter;
+font-size: 20px;
+}
+
+.content-Quickview a:hover{
+padding-bottom: 20px;
+transition: 0.3s;
+color:#000000;
+}
+
+.product-details p{
+text-align: center;
+}
+
+.product-details p::after{
+content: '';
+width: 20%;
+height: 10px;
+display: block;
+margin: 0 auto;
+border-bottom: 2px solid #000000;
+}
+
+.product-handbags p{
+font-size: 12px;
+text-align: center;
+}
+
+.product-handbags .Handbags1,.Handbags2,.Handbags3,.Handbags4,.Handbags5,.Handbags6,.Handbags7,.Handbags8,.Handbags9 {
+border: 1px solid rgb(255, 255, 255);
+display:inline-block;
+padding: 10px;
+}
+
+.shoes-model{
+text-align: center
+}
+.Shoes{
+max-width: 1300px;
+margin: auto;
+margin-top: 28px;
+margin-bottom: 28px;
+}
+
+.title span h1{
+text-transform: uppercase;
+text-align: center;
+}
+
+.title span h1::after{
+content: '';
+width: 50%;
+height: 10px;
+display: block;
+margin: 0 auto;
+border-bottom:3px solid #9CB4CC ;
+}
+
+.product-shoes{
+flex-wrap: wrap;
+text-align: center;
+}
+
+.content-QuikView{
+position: relative;
+}
+
+.content-QuikView a{
+font-family: 'Exo',sans-serif;
+color: rgb(119,115,115);
+font-weight: lighter;
+font-size: 20px;
+}
+.content-QuikView a:hover{
+padding-bottom: 20px;
+transition: 0.3s;
+color: black;
+}
+.product-shoes h3{
+font-size: 12px;
+text-align: center;
+}
+
+.product-explain p{
+text-align: center;
+}
+
+.product-explain p::after{
+content: '';
+width: 60%;
+height: 10px;
+display: block;
+margin: 0 auto;
+border-bottom: 2px solid #9CB4CC;
+}
+
+.product-shoes p{
+font-size: 12px;
+text-align: center;
+}
+
+.shoes .shoes1,.shoes2,.shoes3,.shoes4,.shoes5,.shoes6,.shoes7,.shoes8,.shoes9{
+border: 1px solid rgb(255, 255, 255);
+display: inline-block;
+padding: 10px;
+}
+
+.clothes-model {
+display: flex;
+width: 75%;
+margin: 20px auto;
+align-items: stretch;
+}
+
+.clothes-model >div{
+border: 1px solid gray;
+padding: 8px;
+}
+
+
+h1 {
+  text-indent: 90px;
+  text-align: center;
+  text-transform:uppercase;
+  color: #494949;
+}
+
+p {
+  text-indent: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.clothes{
+    max-width:1300px;
+    margin: auto;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+
+.title span h1 {
+   text-transform: uppercase;
+   text-align: center;
+}
+
+
+.title span h1::after{
+content:'';
+width: 50%;
+height: 10px;
+display: block;
+margin:0 auto;
+border-bottom: 3px solid #9CB4CC;
+}
+
+
+.product-clothes{
+flex-wrap:wrap;
+text-align: center;
+}
+
+
+.product-clothes span{
+text-align:center;
+font-size:30px;
+font-family: 'Kaushan Script', cursive;
+}
+
+
+.product-clothes span::before {
+content:'';
+padding-top:20px;
+display:block;
+}
+
+
+.product-clothes h3{
+font-size: 12px;
+    text-align:center;
+}
+
+
+.product-explain p{
+text-align:center;
+}
+
+
+.product-explain p::after{
+content:'';
+width: 50%;
+height: 10px;
+display: block;
+margin:0 auto;
+border-bottom: 2px solid #9CB4CC;
+}
+
+
+.product-clothes p{
+font-size:12px;
+text-align:center;
+}
+
+
+.clothes-dress .dress1,.dress2,.dress3{
+border:  1px solid rgb(255,255,255);
+display:inline-block;
+padding:10px;
+}
+
+
+.clothes-coat .coat1,.coat2,.coat3{
+border:  1px solid rgb(255,255,255);
+display:inline-block;
+padding:10px;
+}
+
+.clothes-suit .suit1,.suit2,.suit3{
+border:  1px solid rgb(255,255,255);
+display:inline-block;
+padding:10px;
+}
